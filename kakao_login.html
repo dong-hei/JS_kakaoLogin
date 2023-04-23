@@ -10,11 +10,11 @@
     <a href="javascript:kakaoLogin();"><img src="https://developers.kakao.com/tool/resource/static/img/button/login/full/ko/kakao_login_medium_narrow.png"></a>
     <script src="https:/developers.kakao.com/sdk/js/kakao.js"></script>
     <script>
-        window.Kakao.init("부여 받은 js 키 "); //부여 받은 js 키
+        window.Kakao.init("");
 
         function kakaoLogin(){
             window.Kakao.Auth.login({
-                scope:'profile_nickname, account_email, gender', //동의 항목 범위
+                scope:'profile_nickname, account_email, gender',
                 success: function(authObj){
                     console.log(authObj)
                     window.Kakao.API.request({
