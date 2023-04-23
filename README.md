@@ -16,14 +16,18 @@ Kakao Developers 사이트 접속 >
 window.Kakao.init("부여 받은 js 키를 입력!");
 7. 카카오 부여받은 JS키 입력
 
+function kakaoLogin(){}
+8. 콜백 함수
+
+function kakaoLogin(){함수 안의 내용}
 scope:'profile_nickname, account_email, gender',
-8. 동의항목에 체크한 내용들 scope
+9. 동의항목에 체크한 내용들 scope
 
 success: function(authObj){
 window.Kakao.API.request({
 url:'/v2/user/me',
-success: res =>{}
- 9.인증 성공했을때 콜백함수 (카카오 Docs에 있는 내용과 같다.)
+success: res =>{const kakao_account = res.kakao_account;}
+10. 인증 성공했을때 콜백함수 (카카오 Docs에 있는 내용과 같다.)
 
             
             
